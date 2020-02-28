@@ -6,7 +6,7 @@ import java.util.List;
 public class AppDriver {
 
     public static void main(String[] args) {
-        //mvn exec:java -Dexec.mainClass=com.knoldus.AppDriver
+
         PrintResults printResult = new PrintResults();
 
         //QUESTION-1
@@ -33,12 +33,12 @@ public class AppDriver {
                 sampleUser4, sampleUser5, sampleUser6);
         User test = new User();
         //1
-        List<String> result1 = test.questionOne(listOfUsers);
+        List<String> result1 = test.filterUserAgeCity(listOfUsers);
         //2
-        List<String> result2 = test.questionTwo(listOfUsers);
+        List<String> result2 = test.filterUserIdAge(listOfUsers);
         //3
-        List<String> result3 = test.questionThree(listOfUsers);
+        List<String> result3 = test.filterUserEvenAge(listOfUsers);
         //4
-        List<String> result4 = test.questionFour(listOfUsers);
+        List<String> result4 = test.filterUserAgeEqualCity(listOfUsers);
     }
 }

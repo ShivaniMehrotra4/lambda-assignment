@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * User is a user defined class having common attributes.
+ * User is a user defined class having attributes id,name,address,age.
  */
 public class User {
     private Integer id;
@@ -37,28 +37,52 @@ public class User {
         return age;
     }
 
-    public List<String> questionOne(List<User> list) {
+    /**
+     * filterUserAgeCity function takes in a list of users as input,
+     * and list out all the users with age above 18 and address Delhi.
+     * @param list - List of User objects.
+     * @return List of names (Strings).
+     */
+    public List<String> filterUserAgeCity(List<User> list) {
         return list.stream()
                 .filter(ele -> Integer.parseInt(ele.getAge()) > 18 && ele.getAddress().equals("Delhi"))
                 .map(User::getName)
                 .collect(Collectors.toList());
     }
 
-    public List<String> questionTwo(List<User> list) {
+    /**
+     * filterUserIdAge function takes in a list of users as input,
+     * and list out all the users with id greater than 10 and age less than 20.
+     * @param list - List of User objects.
+     * @return List of names (Strings).
+     */
+    public List<String> filterUserIdAge(List<User> list) {
         return list.stream()
                 .filter(ele -> ele.getId() > 10 && Integer.parseInt(ele.getAge()) < 20)
                 .map(User::getName)
                 .collect(Collectors.toList());
     }
 
-    public List<String> questionThree(List<User> list) {
+    /**
+     * filterUserEvenAge function takes in a list of users as input,
+     * and list out all the users with age as even number.
+     * @param list - List of User objects.
+     * @return List of names (Strings).
+     */
+    public List<String> filterUserEvenAge(List<User> list) {
         return list.stream()
                 .filter(ele -> Integer.parseInt(ele.getAge()) % 2 == 0)
                 .map(User::getName)
                 .collect(Collectors.toList());
     }
 
-    public List<String> questionFour(List<User> list) {
+    /**
+     * filterUserAgeEqualCity function takes in a list of users as input,
+     * and list out all the users with age equals to 18 and address Delhi.
+     * @param list - List of User objects.
+     * @return List of names (Strings).
+     */
+    public List<String> filterUserAgeEqualCity(List<User> list) {
         return list.stream()
                 .filter(ele -> ele.getAge().equals("18") && ele.getAddress().equals("Delhi"))
                 .map(User::getName)
