@@ -19,7 +19,6 @@ public class PrintResults {
                 (name + " " + age + " " + pinCode + " " + countryCode + " " + city));
         System.out.println(pd.displayDetails("Shivani",24,201005,91,"sbd"));
     }
-
     /**
      * filterOutList performs filtering operation upon a list of user objects,
      * and filter out cities name starting with c and sorts them.
