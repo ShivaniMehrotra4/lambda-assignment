@@ -24,6 +24,7 @@ public class PrintResults {
      * and filter out cities name starting with c and sorts them.
      * @param myList - List of names of cities.
      */
+
     public void filterOutList(List<String> myList) {
         List<String> result = myList.stream()
                 .filter(s -> s.startsWith("C") || s.startsWith("c"))

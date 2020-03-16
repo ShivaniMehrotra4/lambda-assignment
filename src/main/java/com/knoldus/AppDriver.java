@@ -33,12 +33,12 @@ public class AppDriver {
                 sampleUser4, sampleUser5, sampleUser6);
         User test = new User();
         //1
-        List<String> result1 = test.filterUserAgeCity(listOfUsers);
+        System.out.println(test.filterUserAgeCity(listOfUsers));
         //2
-        List<String> result2 = test.filterUserIdAge(listOfUsers);
+        System.out.println(test.filterUserIdAge(listOfUsers));
         //3
-        List<String> result3 = test.filterUserEvenAge(listOfUsers);
+        System.out.println(test.filterUserEvenAge(listOfUsers));
         //4
-        List<String> result4 = test.filterUserAgeEqualCity(listOfUsers);
+        System.out.println(test.filterUserAgeEqualCity(listOfUsers));
     }
 }
